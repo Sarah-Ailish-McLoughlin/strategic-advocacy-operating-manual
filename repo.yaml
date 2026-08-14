@@ -1,0 +1,26 @@
+schema_version: "0.1"
+repository:
+  name: strategic-advocacy-operating-manual
+  owner: Sarah-Ailish-McLoughlin
+  visibility: public
+  purpose: "Governed public reference implementation for strategic advocacy practice."
+  status: foundation
+  version: "0.1-dev"
+governance:
+  canonical_changes_require_human_approval: true
+  ai_authority:
+    recommend: true
+    draft: true
+    validate: true
+    transform: true
+    approve_canonical_change: false
+machine_maturity:
+  current_target: 2
+  levels:
+    1: human-readable
+    2: machine-readable
+    3: machine-understandable
+    4: machine-executable
+    5: machine-testable
+    6: machine-observable
+    7: machine-evolvable

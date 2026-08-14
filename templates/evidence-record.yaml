@@ -1,0 +1,25 @@
+schema_version: "0.1"
+evidence_id: ""
+title: ""
+status: draft
+source:
+  type: ""
+  reference: ""
+  publisher_or_origin: ""
+  published_at: null
+  accessed_at: null
+supports_claims: []
+contradicts_claims: []
+summary: ""
+limitations: []
+confidence:
+  level: unassessed
+  rationale: ""
+provenance:
+  recorded_by: ""
+  recorded_at: null
+  transformations: []
+review:
+  owner: ""
+  review_at: null
+notes: ""
