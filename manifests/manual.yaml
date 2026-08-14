@@ -1,0 +1,37 @@
+schema_version: "0.1"
+manual:
+  id: strategic-advocacy-operating-manual
+  title: Strategic Advocacy Operating Manual
+  version: "0.1-dev"
+  status: foundation
+  canonical: false
+  audience:
+    - advocacy practitioners
+    - organisations
+    - authorised AI-assisted workflows
+  lifecycle:
+    - frame
+    - understand
+    - strategise
+    - design
+    - act
+    - observe
+    - learn-and-adapt
+    - close-or-renew
+  artefact_classes:
+    - guidance
+    - method
+    - playbook
+    - template
+    - evidence
+    - decision
+    - example
+    - schema
+    - manifest
+  authority:
+    canonical_approval: human
+    ai_roles:
+      - recommend
+      - draft
+      - validate
+      - transform
