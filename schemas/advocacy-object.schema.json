@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Sarah-Ailish-McLoughlin/strategic-advocacy-operating-manual/schemas/advocacy-object.schema.json",
+  "title": "Strategic Advocacy Object",
+  "description": "Foundation schema for identifiable, provenance-aware objects used by the Strategic Advocacy Operating Manual.",
+  "type": "object",
+  "required": ["id", "type", "title", "status"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "type": {
+      "type": "string",
+      "enum": ["guidance", "method", "playbook", "template", "evidence", "decision", "example", "schema", "manifest"]
+    },
+    "title": {"type": "string", "minLength": 1},
+    "status": {
+      "type": "string",
+      "enum": ["draft", "proposed", "review", "approved", "superseded", "retired"]
+    },
+    "version": {"type": "string"},
+    "description": {"type": "string"},
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "source": {"type": "string"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "updated_at": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": true
+    },
+    "human_approval_required": {"type": "boolean", "default": true}
+  },
+  "additionalProperties": true
+}
