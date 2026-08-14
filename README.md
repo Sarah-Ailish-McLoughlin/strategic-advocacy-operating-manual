@@ -20,6 +20,14 @@ This repository is being developed as an operating manual rather than a document
 - [Foundation object schema](schemas/advocacy-object.schema.json)
 - [Validation](tests/README.md)
 
+## Foundation operating capability
+
+- [Strategy development playbook](playbooks/strategy-development.md)
+- [Stakeholder and power mapping](methods/stakeholder-power-mapping.md)
+- [Advocacy theory of change](methods/theory-of-change.md)
+- [Advocacy strategy template](templates/advocacy-strategy.md)
+- [Machine-readable evidence record](templates/evidence-record.yaml)
+
 ## Initial scope
 
 - strategic advocacy purpose, scope, and principles
