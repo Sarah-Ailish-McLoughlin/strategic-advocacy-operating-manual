@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "sao": "https://w3id.org/strategic-advocacy#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "id": "@id",
+    "type": "@type",
+    "title": "dcterms:title",
+    "description": "dcterms:description",
+    "hasMatter": {"@id": "sao:hasMatter", "@type": "@id"},
+    "pursuesGoal": {"@id": "sao:pursuesGoal", "@type": "@id"},
+    "involvesActor": {"@id": "sao:involvesActor", "@type": "@id"},
+    "occursWithin": {"@id": "sao:occursWithin", "@type": "@id"},
+    "usesStrategy": {"@id": "sao:usesStrategy", "@type": "@id"},
+    "implements": {"@id": "sao:implements", "@type": "@id"},
+    "targetsActor": {"@id": "sao:targetsActor", "@type": "@id"},
+    "performedBy": {"@id": "sao:performedBy", "@type": "@id"},
+    "supportedBy": {"@id": "sao:supportedBy", "@type": "@id"},
+    "usesEvidence": {"@id": "sao:usesEvidence", "@type": "@id"},
+    "occursAtStage": {"@id": "sao:occursAtStage", "@type": "@id"},
+    "producesObservation": {"@id": "sao:producesObservation", "@type": "@id"},
+    "informsDecision": {"@id": "sao:informsDecision", "@type": "@id"},
+    "resultsIn": {"@id": "sao:resultsIn", "@type": "@id"},
+    "measuredBy": {"@id": "sao:measuredBy", "@type": "@id"},
+    "usesResource": {"@id": "sao:usesResource", "@type": "@id"},
+    "requiresAccessibility": {"@id": "sao:requiresAccessibility", "@type": "@id"},
+    "supersedes": {"@id": "sao:supersedes", "@type": "@id"}
+  }
+}
