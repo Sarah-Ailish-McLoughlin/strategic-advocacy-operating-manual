@@ -1,0 +1,8 @@
+@prefix sao: <https://w3id.org/strategic-advocacy#> .
+@prefix ex: <https://example.org/strategic-advocacy/> .
+
+# Deliberately invalid: AdvocacyEffort has a matter but no pursuesGoal.
+ex:invalid-effort a sao:AdvocacyEffort ;
+  sao:hasMatter ex:matter-001 .
+
+ex:matter-001 a sao:AdvocacyMatter .
