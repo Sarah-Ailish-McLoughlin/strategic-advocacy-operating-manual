@@ -1,0 +1,9 @@
+local_term,external_vocabulary,external_term,mapping_relation,status,review_note
+Actor,PROV-O,prov:Agent,related,proposed,"Actor is context-specific; equivalence is not asserted."
+AdvocacyAction,PROV-O,prov:Activity,broader-alignment,proposed,"AdvocacyAction is modelled as a subclass of prov:Activity in the proposed TTL."
+Evidence,PROV-O,prov:Entity,broader-alignment,proposed,"Evidence is modelled as a subclass of prov:Entity."
+Strategy,PROV-O,prov:Entity,broader-alignment,proposed,"Strategy is an identifiable information entity for provenance purposes."
+Decision,PROV-O,prov:Entity,broader-alignment,proposed,"Decision records can carry provenance without equating the domain concept with all prov:Entity instances."
+LifecycleStage,SKOS,skos:Concept,representation,proposed,"Lifecycle stage values are represented as SKOS concepts in a controlled concept scheme."
+Resource,Dublin Core,dcterms:Resource,related,proposed,"Potential metadata alignment; requires namespace/publication review."
+Actor,Wikidata,Q5,none,rejected-as-general,"Q5 is human and cannot represent organisations, coalitions, institutions, or communities; map narrower subclasses individually instead."
