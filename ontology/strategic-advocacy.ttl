@@ -1,0 +1,59 @@
+@prefix sao: <https://w3id.org/strategic-advocacy#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/strategic-advocacy> a owl:Ontology ;
+  dcterms:title "Strategic Advocacy Ontology" ;
+  dcterms:description "Proposed machine-readable semantic foundation for the Strategic Advocacy Operating Manual." ;
+  owl:versionInfo "0.1-proposed" .
+
+sao:Actor a owl:Class ; rdfs:label "Actor" .
+sao:AdvocacyMatter a owl:Class ; rdfs:label "Advocacy matter" .
+sao:AdvocacyGoal a owl:Class ; rdfs:label "Advocacy goal" .
+sao:AdvocacyEffort a owl:Class ; rdfs:label "Advocacy effort" .
+sao:LifecycleStage a owl:Class ; rdfs:label "Lifecycle stage" .
+sao:Evidence a owl:Class ; rdfs:label "Evidence" ; rdfs:subClassOf prov:Entity .
+sao:System a owl:Class ; rdfs:label "System" .
+sao:SystemElement a owl:Class ; rdfs:label "System element" .
+sao:Strategy a owl:Class ; rdfs:label "Strategy" ; rdfs:subClassOf prov:Entity .
+sao:AdvocacyAction a owl:Class ; rdfs:label "Advocacy action" ; rdfs:subClassOf prov:Activity .
+sao:Decision a owl:Class ; rdfs:label "Decision" ; rdfs:subClassOf prov:Entity .
+sao:Resource a owl:Class ; rdfs:label "Resource" ; rdfs:subClassOf prov:Entity .
+sao:Observation a owl:Class ; rdfs:label "Observation" ; rdfs:subClassOf prov:Entity .
+sao:Outcome a owl:Class ; rdfs:label "Outcome" .
+sao:Indicator a owl:Class ; rdfs:label "Indicator" .
+sao:AccessibilityRequirement a owl:Class ; rdfs:label "Accessibility requirement" .
+
+sao:hasMatter a owl:ObjectProperty ; rdfs:domain sao:AdvocacyEffort ; rdfs:range sao:AdvocacyMatter .
+sao:pursuesGoal a owl:ObjectProperty ; rdfs:domain sao:AdvocacyEffort ; rdfs:range sao:AdvocacyGoal .
+sao:involvesActor a owl:ObjectProperty ; rdfs:domain sao:AdvocacyEffort ; rdfs:range sao:Actor .
+sao:hasSystemElement a owl:ObjectProperty ; rdfs:domain sao:System ; rdfs:range sao:SystemElement .
+sao:usesStrategy a owl:ObjectProperty ; rdfs:domain sao:AdvocacyEffort ; rdfs:range sao:Strategy .
+sao:implements a owl:ObjectProperty ; rdfs:domain sao:AdvocacyAction ; rdfs:range sao:Strategy .
+sao:targetsActor a owl:ObjectProperty ; rdfs:domain sao:AdvocacyAction ; rdfs:range sao:Actor .
+sao:performedBy a owl:ObjectProperty ; rdfs:domain sao:AdvocacyAction ; rdfs:range sao:Actor .
+sao:producesObservation a owl:ObjectProperty ; rdfs:domain sao:AdvocacyAction ; rdfs:range sao:Observation .
+sao:resultsIn a owl:ObjectProperty ; rdfs:range sao:Outcome ; rdfs:comment "Records an outcome association and does not by itself assert sole causation." .
+sao:measuredBy a owl:ObjectProperty ; rdfs:range sao:Indicator .
+sao:usesResource a owl:ObjectProperty ; rdfs:range sao:Resource .
+sao:requiresAccessibility a owl:ObjectProperty ; rdfs:range sao:AccessibilityRequirement .
+sao:supportedBy a owl:ObjectProperty ; rdfs:range sao:Evidence .
+sao:usesEvidence a owl:ObjectProperty ; rdfs:range sao:Evidence .
+sao:informsDecision a owl:ObjectProperty ; rdfs:range sao:Decision .
+sao:occursAtStage a owl:ObjectProperty ; rdfs:range sao:LifecycleStage .
+sao:occursWithin a owl:ObjectProperty ; rdfs:range sao:System .
+sao:supersedes a owl:ObjectProperty ; rdfs:label "supersedes" .
+
+sao:lifecycleScheme a skos:ConceptScheme ; skos:prefLabel "Strategic advocacy lifecycle" .
+sao:Frame a sao:LifecycleStage, skos:Concept ; skos:inScheme sao:lifecycleScheme ; skos:prefLabel "Frame" ; skos:notation "1" .
+sao:Understand a sao:LifecycleStage, skos:Concept ; skos:inScheme sao:lifecycleScheme ; skos:prefLabel "Understand" ; skos:notation "2" ; skos:broader sao:Frame .
+sao:Strategise a sao:LifecycleStage, skos:Concept ; skos:inScheme sao:lifecycleScheme ; skos:prefLabel "Strategise" ; skos:notation "3" .
+sao:Design a sao:LifecycleStage, skos:Concept ; skos:inScheme sao:lifecycleScheme ; skos:prefLabel "Design" ; skos:notation "4" .
+sao:Act a sao:LifecycleStage, skos:Concept ; skos:inScheme sao:lifecycleScheme ; skos:prefLabel "Act" ; skos:notation "5" .
+sao:Observe a sao:LifecycleStage, skos:Concept ; skos:inScheme sao:lifecycleScheme ; skos:prefLabel "Observe" ; skos:notation "6" .
+sao:LearnAndAdapt a sao:LifecycleStage, skos:Concept ; skos:inScheme sao:lifecycleScheme ; skos:prefLabel "Learn and adapt" ; skos:notation "7" .
+sao:CloseOrRenew a sao:LifecycleStage, skos:Concept ; skos:inScheme sao:lifecycleScheme ; skos:prefLabel "Close or renew" ; skos:notation "8" .
