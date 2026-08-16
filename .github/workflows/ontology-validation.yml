@@ -1,0 +1,33 @@
+name: Ontology validation
+
+on:
+  pull_request:
+    paths:
+      - "ontology/**"
+      - "scripts/validate_ontology.py"
+      - "requirements-ontology.txt"
+      - ".github/workflows/ontology-validation.yml"
+  push:
+    branches: [main]
+    paths:
+      - "ontology/**"
+      - "scripts/validate_ontology.py"
+      - "requirements-ontology.txt"
+      - ".github/workflows/ontology-validation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install ontology validators
+        run: pip install -r requirements-ontology.txt
+      - name: Validate ontology artefacts
+        run: python scripts/validate_ontology.py
