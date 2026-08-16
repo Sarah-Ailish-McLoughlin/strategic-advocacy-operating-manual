@@ -1,0 +1,41 @@
+@prefix sao: <https://w3id.org/strategic-advocacy#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+sao:AdvocacyEffortShape a sh:NodeShape ;
+  sh:targetClass sao:AdvocacyEffort ;
+  sh:property [
+    sh:path sao:hasMatter ;
+    sh:minCount 1 ;
+    sh:class sao:AdvocacyMatter ;
+    sh:message "An AdvocacyEffort must identify at least one AdvocacyMatter."
+  ] ;
+  sh:property [
+    sh:path sao:pursuesGoal ;
+    sh:minCount 1 ;
+    sh:class sao:AdvocacyGoal ;
+    sh:message "An AdvocacyEffort must pursue at least one AdvocacyGoal."
+  ] .
+
+sao:AdvocacyActionShape a sh:NodeShape ;
+  sh:targetClass sao:AdvocacyAction ;
+  sh:property [
+    sh:path sao:performedBy ;
+    sh:minCount 1 ;
+    sh:class sao:Actor ;
+    sh:message "An AdvocacyAction must identify at least one performing Actor."
+  ] ;
+  sh:property [
+    sh:path sao:occursAtStage ;
+    sh:maxCount 1 ;
+    sh:class sao:LifecycleStage ;
+    sh:message "If supplied, an AdvocacyAction lifecycle stage must be a LifecycleStage."
+  ] .
+
+sao:OutcomeShape a sh:NodeShape ;
+  sh:targetClass sao:Outcome ;
+  sh:property [
+    sh:path sao:measuredBy ;
+    sh:class sao:Indicator ;
+    sh:message "Outcome measures must be Indicators."
+  ] .
