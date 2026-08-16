@@ -1,0 +1,27 @@
+@prefix sao: <https://w3id.org/strategic-advocacy#> .
+@prefix ex: <https://example.org/strategic-advocacy/> .
+
+ex:effort-001 a sao:AdvocacyEffort ;
+  sao:hasMatter ex:matter-001 ;
+  sao:pursuesGoal ex:goal-001 ;
+  sao:involvesActor ex:advocate-001 ;
+  sao:usesStrategy ex:strategy-001 .
+
+ex:matter-001 a sao:AdvocacyMatter ;
+  sao:occursWithin ex:system-001 .
+
+ex:goal-001 a sao:AdvocacyGoal ;
+  sao:measuredBy ex:indicator-001 .
+
+ex:advocate-001 a sao:Actor .
+ex:system-001 a sao:System .
+ex:indicator-001 a sao:Indicator .
+ex:strategy-001 a sao:Strategy .
+
+ex:action-001 a sao:AdvocacyAction ;
+  sao:implements ex:strategy-001 ;
+  sao:performedBy ex:advocate-001 ;
+  sao:occursAtStage sao:Act ;
+  sao:producesObservation ex:observation-001 .
+
+ex:observation-001 a sao:Observation .
